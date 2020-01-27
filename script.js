@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var apiRoot = 'https://sleepy-shore-82591.herokuapp.com/v1/task';
+  var apiRoot = 'https://sleepy-shore-82591.herokuapp.com/v1/task/';
   var datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
   var tasksContainer = $('[data-tasks-container]');
 
@@ -28,7 +28,7 @@ $(document).ready(function() {
   }
 
   function getAllTasks() {
-    var requestUrl = apiRoot + '/getTasks';
+    var requestUrl = apiRoot + 'getTasks';
 
     $.ajax({
       url: requestUrl,
