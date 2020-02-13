@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  const apiRoot = 'https://localhost:8080/v1/task/';
-  const trelloApiRoot = 'https://localhost:8080/v1/trello/';
+  const apiRoot = 'https://sleepy-shore-82591.herokuapp.com/v1/task/';
+  const trelloApiRoot = 'https://sleepy-shore-82591.herokuapp.com/v1/trello/';
   const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
   const $tasksContainer = $('[data-tasks-container]');
 
@@ -168,7 +168,7 @@ $(document).ready(function() {
   }
 
   function handleCardCreationRequest(event) {
-    var requestUrl = trelloApiRoot + 'createTrelloCard';
+    var requestUrl = 'https://localhost:8080/v1/trello/createTrelloCard';
     var $relatedTaskRow = $(event.target).parents('[data-task-id]');
     var relatedTaskId = $relatedTaskRow.attr('data-task-id');
     var relatedTask = availableTasks[relatedTaskId];
